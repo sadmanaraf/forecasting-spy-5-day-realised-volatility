@@ -1,0 +1,12 @@
+series,ADF stat,ADF p,KPSS stat,KPSS p,verdict
+y,-5.406,0.0,0.976,0.01,mixed
+f1,-7.079,0.0,0.859,0.01,mixed
+f2,-5.423,0.0,0.964,0.01,mixed
+f3,-2.956,0.039,0.965,0.01,mixed
+f4,-2.965,0.038,1.265,0.01,mixed
+f5,-10.588,0.0,0.264,0.1,stationary
+f6,-2.494,0.117,2.073,0.01,non-stationary
+f7,-3.009,0.034,1.2,0.01,mixed
+f8,-6.458,0.0,0.098,0.1,stationary
+f9,-12.228,0.0,0.028,0.1,stationary
+f10,-5.928,0.0,0.357,0.096,stationary
