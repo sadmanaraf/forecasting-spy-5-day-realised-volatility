@@ -2,6 +2,8 @@
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+# VIX is Cboe's copyrighted data (via FRED): cite it, download it, but do not redistribute it
+data/raw/VIXCLS.csv
 
 # Python
 __pycache__/

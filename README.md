@@ -18,7 +18,7 @@ forecasting-spy-5-day-realised-volatility/
 ├── requirements.txt
 ├── Main_Notebook.ipynb     # data, target, features, split -> model_table.csv
 ├── data/
-│   ├── raw/                # the four downloaded files, never edited (committed)
+│   ├── raw/                # the downloaded files, never edited (Kaggle files committed, VIX not)
 │   └── processed/          # model_table.csv (generated, not committed)
 ├── src/foundation/         # evaluate.py: evaluate(), save_predictions()
 ├── slices/
@@ -33,14 +33,16 @@ forecasting-spy-5-day-realised-volatility/
 
 ## Getting the data
 
-These four files are committed in `data/raw/`. To download them again, use exactly these names:
+The three Kaggle files are committed in `data/raw/`. The VIX file is **not** committed (see the note below the table), so download it before running. Use exactly these names:
 
 | File | Source |
 |---|---|
 | `spy.us.txt` | Kaggle, [Huge Stock Market Dataset](https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs) (B. Marjanovic, CC0), `ETFs/` folder |
 | `tlt.us.txt` | same dataset, `ETFs/` folder |
 | `xlf.us.txt` | same dataset, `ETFs/` folder |
-| `VIXCLS.csv` | FRED, [CBOE Volatility Index: VIX](https://fred.stlouisfed.org/series/VIXCLS) (original source Cboe). Download as CSV covering at least 2005-02-25 to 2017-11-10 |
+| `VIXCLS.csv` | FRED, [CBOE Volatility Index: VIX](https://fred.stlouisfed.org/series/VIXCLS) (original source Cboe). Download as CSV covering at least 2005-02-25 to 2017-11-10, e.g. from <https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS>, and save it as `data/raw/VIXCLS.csv` |
+
+**About the VIX data.** The VIX is copyrighted by Cboe ("Copyright, Chicago Board Options Exchange, Inc. Reprinted with permission"), and FRED marks it *Copyrighted: Citation Required*. We use it for non-commercial academic research with the required citation, but we do not redistribute it, so `data/raw/VIXCLS.csv` is git-ignored. Citation: Chicago Board Options Exchange, CBOE Volatility Index: VIX [VIXCLS], retrieved from FRED, Federal Reserve Bank of St. Louis; <https://fred.stlouisfed.org/series/VIXCLS>. A newer download has more rows; the main notebook only uses the days in the SPY file.
 
 `data/processed/` is git-ignored; step 2 of How to run rebuilds it.
 
